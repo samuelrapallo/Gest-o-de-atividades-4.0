@@ -22,9 +22,14 @@ export default function Home() {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert('Erro no login');
+      const errorMessage = error?.message || 'Erro desconhecido';
+      if (errorMessage.includes('auth/unauthorized-domain')) {
+        alert('Erro: Domínio não autorizado. Acesse o Firebase Console (console.firebase.google.com), selecione seu projeto, vá em Authentication > Settings > Authorized domains e adicione o domínio do Vercel.');
+      } else {
+        alert(`Erro no login: ${errorMessage}`);
+      }
     }
   };
 
