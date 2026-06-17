@@ -1,0 +1,17 @@
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
+
+const firebaseConfig = {
+  projectId: "buoyant-camera-nln7n",
+  appId: "1:421169423063:web:89c1d6bfb25dd284890692",
+  apiKey: "AIzaSyAHAftABy9aLJbrSwkqKKzvpduqqSExDUw",
+  authDomain: "buoyant-camera-nln7n.firebaseapp.com",
+  firestoreDatabaseId: "ai-studio-4873a24e-64f2-427e-8d0f-52a6d832722b",
+  storageBucket: "buoyant-camera-nln7n.firebasestorage.app",
+  messagingSenderId: "421169423063",
+};
+
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+export const auth = getAuth(app);

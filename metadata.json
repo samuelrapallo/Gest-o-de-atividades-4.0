@@ -1,0 +1,10 @@
+{
+  "name": "Gestão de Atividades Executivas",
+  "description": "Aplicativo web moderno para gerenciamento de atividades operacionais e executivas com atualização em tempo real.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

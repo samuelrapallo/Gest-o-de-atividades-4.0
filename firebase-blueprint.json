@@ -1,0 +1,28 @@
+{
+  "rulesVersion": "2",
+  "collections": [
+    {
+      "name": "projects",
+      "fields": {
+        "adminUid": "string",
+        "name": "string",
+        "createdAt": "timestamp"
+      },
+      "subcollections": [
+        {
+          "name": "activities",
+          "fields": {
+            "title": "string",
+            "order": "string",
+            "date": "string",
+            "assignee": "string",
+            "status": "string",
+            "notes": "string",
+            "pictures": "array",
+            "history": "array"
+          }
+        }
+      ]
+    }
+  ]
+}
